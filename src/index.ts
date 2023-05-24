@@ -33,7 +33,7 @@ app.set("trust proxy", 1);
 app.use(helmet({
 	contentSecurityPolicy: {
 		directives: {
-			"script-src": ["'self'", "https://unpkg.com", "https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css", "https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css"],
+			"script-src": ["'self'", "https://unpkg.com", "https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css", "https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css", "https://unpkg.com/flowbite@1.4.3/dist/flowbite.js", "https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"],
 		},
 	},
 }));
