@@ -31,11 +31,7 @@ app.set("view engine", "pug");
 app.set("views", path.resolve(__dirname, "../views"));
 app.set("trust proxy", 1);
 app.use(helmet({
-	contentSecurityPolicy: {
-		directives: {
-			"script-src": ["'self'", "https://unpkg.com", "https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css", "https://unpkg.com/flowbite@1.4.3/dist/flowbite.min.css", "https://unpkg.com/flowbite@1.4.3/dist/flowbite.js", "https://unpkg.com/flowbite@1.4.3/dist/flowbite.js"],
-		},
-	},
+	contentSecurityPolicy: false,
 }));
 app.use(session({
   name: "mid",
