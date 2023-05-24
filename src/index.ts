@@ -30,7 +30,13 @@ const app = express();
 app.set("view engine", "pug");
 app.set("views", path.resolve(__dirname, "../views"));
 app.set("trust proxy", 1);
-app.use(helmet());
+app.use(helmet({
+	contentSecurityPolicy: {
+		directives: {
+			"script-src": ["'self'", "https://unpkg.com"],
+		},
+	},
+}));
 app.use(session({
   name: "mid",
   resave: false,
